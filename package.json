@@ -1,0 +1,19 @@
+{
+  "name": "computing-2-submission",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web-app/server/server.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "docdash": "^1.2.0",
+    "mocha": "^9.2.2"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.3",
+    "nodemodule": "^0.3.0"
+  }
+}

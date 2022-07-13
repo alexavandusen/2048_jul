@@ -1,0 +1,66 @@
+.tile-container {
+    position: absolute;
+  }
+
+  .tile-row {
+    margin-bottom: 15px;
+
+
+    :after {
+    content: "";
+    display: block;
+    clear: both;
+    }
+  }
+
+
+.tile-cell {
+    width: 500px - 15px * (4+1)/4;
+    height: 500px - 15px * (4+1)/4;
+    margin-right: 15px;
+    float: left;
+
+    border-radius: 3px solid #bbada0;
+
+    background: rgba(#eee4da, .35);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .number-container {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .tile {
+    width: 500px - 15px * (4+1)/4;
+    height: 500px - 15px * (4+1)/4;
+    line-height: 500px - 15px * (4+1)/4 + 10px;
+
+
+    @for $x from 1 through 4 {
+      @for $y from 1 through 4 {
+        &.tile-position-#{$x}-#{$y} {
+          position: absolute;
+          left: round((500px - 15px * (4+1)/4 + 15px) * ($x - 1));
+          top: round((500px - 15px * (4+1)/4 + 15px) * ($y - 1));
+        }
+      }
+    }
+  }
+
+
+  /*.grid{
+    aspect-ratio: var(--board-aspect);
+    background-color: #cdc1b5;
+    border: 6px solid #bbada0;
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    max-height: 100%;
+    max-width: 100%;
+}*/
